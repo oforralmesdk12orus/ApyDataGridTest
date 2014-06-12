@@ -1,0 +1,30 @@
+everything:
+    pattern:  /
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:index" }
+
+everything_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:show" }
+
+everything_new:
+    pattern:  /new
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:new" }
+
+everything_create:
+    pattern:  /create
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:create" }
+    requirements: { _method: post }
+
+everything_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:edit" }
+
+everything_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:update" }
+    requirements: { _method: post|put }
+
+everything_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MesdApyDataGridTestBundle:Everything:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,75 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Everything list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Samplearray</th>
+                <th>Samplesimplearray</th>
+                <th>Samplejsonarray</th>
+                <th>Sampleobject</th>
+                <th>Sampleboolean</th>
+                <th>Sampleinteger</th>
+                <th>Samplesmallint</th>
+                <th>Samplebigint</th>
+                <th>Samplestring</th>
+                <th>Sampletext</th>
+                <th>Sampledatetime</th>
+                <th>Sampledatetimetz</th>
+                <th>Sampledate</th>
+                <th>Sampletime</th>
+                <th>Sampledecimal</th>
+                <th>Samplefloat</th>
+                <th>Sampleblob</th>
+                <th>Sampleguid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('everything_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.sampleArray }}</td>
+                <td>{{ entity.sampleSimpleArray }}</td>
+                <td>{{ entity.sampleJsonArray }}</td>
+                <td>{{ entity.sampleObject }}</td>
+                <td>{{ entity.sampleBoolean }}</td>
+                <td>{{ entity.sampleInteger }}</td>
+                <td>{{ entity.sampleSmallInt }}</td>
+                <td>{{ entity.sampleBigInt }}</td>
+                <td>{{ entity.sampleString }}</td>
+                <td>{{ entity.sampleText }}</td>
+                <td>{% if entity.sampleDatetime %}{{ entity.sampleDatetime|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.sampleDatetimeTz }}</td>
+                <td>{% if entity.sampleDate %}{{ entity.sampleDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.sampleTime }}</td>
+                <td>{{ entity.sampleDecimal }}</td>
+                <td>{{ entity.sampleFloat }}</td>
+                <td>{{ entity.sampleBlob }}</td>
+                <td>{{ entity.sampleGuid }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('everything_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('everything_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('everything_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

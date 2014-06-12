@@ -1,0 +1,100 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Everything</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Samplearray</th>
+                <td>{{ entity.sampleArray }}</td>
+            </tr>
+            <tr>
+                <th>Samplesimplearray</th>
+                <td>{{ entity.sampleSimpleArray }}</td>
+            </tr>
+            <tr>
+                <th>Samplejsonarray</th>
+                <td>{{ entity.sampleJsonArray }}</td>
+            </tr>
+            <tr>
+                <th>Sampleobject</th>
+                <td>{{ entity.sampleObject }}</td>
+            </tr>
+            <tr>
+                <th>Sampleboolean</th>
+                <td>{{ entity.sampleBoolean }}</td>
+            </tr>
+            <tr>
+                <th>Sampleinteger</th>
+                <td>{{ entity.sampleInteger }}</td>
+            </tr>
+            <tr>
+                <th>Samplesmallint</th>
+                <td>{{ entity.sampleSmallInt }}</td>
+            </tr>
+            <tr>
+                <th>Samplebigint</th>
+                <td>{{ entity.sampleBigInt }}</td>
+            </tr>
+            <tr>
+                <th>Samplestring</th>
+                <td>{{ entity.sampleString }}</td>
+            </tr>
+            <tr>
+                <th>Sampletext</th>
+                <td>{{ entity.sampleText }}</td>
+            </tr>
+            <tr>
+                <th>Sampledatetime</th>
+                <td>{{ entity.sampleDatetime|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Sampledatetimetz</th>
+                <td>{{ entity.sampleDatetimeTz }}</td>
+            </tr>
+            <tr>
+                <th>Sampledate</th>
+                <td>{{ entity.sampleDate|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Sampletime</th>
+                <td>{{ entity.sampleTime }}</td>
+            </tr>
+            <tr>
+                <th>Sampledecimal</th>
+                <td>{{ entity.sampleDecimal }}</td>
+            </tr>
+            <tr>
+                <th>Samplefloat</th>
+                <td>{{ entity.sampleFloat }}</td>
+            </tr>
+            <tr>
+                <th>Sampleblob</th>
+                <td>{{ entity.sampleBlob }}</td>
+            </tr>
+            <tr>
+                <th>Sampleguid</th>
+                <td>{{ entity.sampleGuid }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('everything') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('everything_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
