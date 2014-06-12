@@ -11,39 +11,57 @@ Mesd\ApyDataGridTestBundle\Entity\Everything:
     fields:
         sampleArray:
             type: array
+            nullable: true
         sampleSimpleArray:
             type: simple_array
+            nullable: true
         sampleJsonArray:
             type: json_array
+            nullable: true
         sampleObject:
             type: object
+            nullable: true
         sampleBoolean:
             type: boolean
+            nullable: true
         sampleInteger:
             type: integer
+            nullable: true
         sampleSmallInt:
             type: smallint
+            nullable: true
         sampleBigInt:
             type: bigint
+            nullable: true
         sampleString:
             type: string
+            nullable: true
             length: 255
         sampleText:
             type: text
+            nullable: true
         sampleDatetime:
             type: datetime
+            nullable: true
         sampleDatetimeTz:
             type: datetimetz
+            nullable: true
         sampleDate:
             type: date
+            nullable: true
         sampleTime:
             type: time
+            nullable: true
         sampleDecimal:
             type: decimal
+            nullable: true
         sampleFloat:
             type: float
+            nullable: true
         sampleBlob:
             type: blob
+            nullable: true
         sampleGuid:
             type: guid
+            nullable: true
     lifecycleCallbacks: {  }
