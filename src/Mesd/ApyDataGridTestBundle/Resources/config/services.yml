@@ -1,0 +1,7 @@
+parameters:
+#    mesd_apy_data_grid_test.example.class: Mesd\ApyDataGridTestBundle\Example
+
+services:
+#    mesd_apy_data_grid_test.example:
+#        class: %mesd_apy_data_grid_test.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

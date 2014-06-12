@@ -1,0 +1,49 @@
+Mesd\ApyDataGridTestBundle\Entity\Everything:
+    type: entity
+    table: null
+    repositoryClass: Mesd\ApyDataGridTestBundle\Entity\EverythingRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        sampleArray:
+            type: array
+        sampleSimpleArray:
+            type: simple_array
+        sampleJsonArray:
+            type: json_array
+        sampleObject:
+            type: object
+        sampleBoolean:
+            type: boolean
+        sampleInteger:
+            type: integer
+        sampleSmallInt:
+            type: smallint
+        sampleBigInt:
+            type: bigint
+        sampleString:
+            type: string
+            length: 255
+        sampleText:
+            type: text
+        sampleDatetime:
+            type: datetime
+        sampleDatetimeTz:
+            type: datetimetz
+        sampleDate:
+            type: date
+        sampleTime:
+            type: time
+        sampleDecimal:
+            type: decimal
+        sampleFloat:
+            type: float
+        sampleBlob:
+            type: blob
+        sampleGuid:
+            type: guid
+    lifecycleCallbacks: {  }

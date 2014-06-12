@@ -1,0 +1,4 @@
+mesd_apy_data_grid_test:
+    resource: "@MesdApyDataGridTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
