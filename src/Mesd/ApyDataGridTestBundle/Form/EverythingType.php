@@ -15,10 +15,6 @@ class EverythingType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('sampleArray')
-            ->add('sampleSimpleArray')
-            ->add('sampleJsonArray')
-            ->add('sampleObject')
             ->add('sampleBoolean')
             ->add('sampleInteger')
             ->add('sampleSmallInt')
@@ -26,13 +22,10 @@ class EverythingType extends AbstractType
             ->add('sampleString')
             ->add('sampleText')
             ->add('sampleDatetime')
-            ->add('sampleDatetimeTz')
             ->add('sampleDate')
             ->add('sampleTime')
             ->add('sampleDecimal')
             ->add('sampleFloat')
-            ->add('sampleBlob')
-            ->add('sampleGuid')
         ;
     }
     

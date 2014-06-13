@@ -10,22 +10,6 @@
                 <td>{{ entity.id }}</td>
             </tr>
             <tr>
-                <th>Samplearray</th>
-                <td>{{ entity.sampleArray }}</td>
-            </tr>
-            <tr>
-                <th>Samplesimplearray</th>
-                <td>{{ entity.sampleSimpleArray }}</td>
-            </tr>
-            <tr>
-                <th>Samplejsonarray</th>
-                <td>{{ entity.sampleJsonArray }}</td>
-            </tr>
-            <tr>
-                <th>Sampleobject</th>
-                <td>{{ entity.sampleObject }}</td>
-            </tr>
-            <tr>
                 <th>Sampleboolean</th>
                 <td>{{ entity.sampleBoolean }}</td>
             </tr>
@@ -51,19 +35,15 @@
             </tr>
             <tr>
                 <th>Sampledatetime</th>
-                <td>{{ entity.sampleDatetime|date('Y-m-d H:i:s') }}</td>
-            </tr>
-            <tr>
-                <th>Sampledatetimetz</th>
-                <td>{{ entity.sampleDatetimeTz }}</td>
+                <td>{% if entity.sampleDatetime %}{{ entity.sampleDatetime|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Sampledate</th>
-                <td>{{ entity.sampleDate|date('Y-m-d H:i:s') }}</td>
+                <td>{% if entity.sampleDate %}{{ entity.sampleDate|date('Y-m-d') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Sampletime</th>
-                <td>{{ entity.sampleTime }}</td>
+                <td>{% if entity.sampleTime %}{{ entity.sampleTime|date('H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Sampledecimal</th>
@@ -72,14 +52,6 @@
             <tr>
                 <th>Samplefloat</th>
                 <td>{{ entity.sampleFloat }}</td>
-            </tr>
-            <tr>
-                <th>Sampleblob</th>
-                <td>{{ entity.sampleBlob }}</td>
-            </tr>
-            <tr>
-                <th>Sampleguid</th>
-                <td>{{ entity.sampleGuid }}</td>
             </tr>
         </tbody>
     </table>

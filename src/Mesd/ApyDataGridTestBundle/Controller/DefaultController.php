@@ -3,6 +3,8 @@
 namespace Mesd\ApyDataGridTestBundle\Controller;
 
 use APY\DataGridBundle\Grid\Source\Entity;
+use APY\DataGridBundle\Grid\Source\Vector;
+use Doctrine\ORM\Query;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
@@ -15,8 +17,21 @@ class DefaultController extends Controller
     public function myGridAction()
     {
         // Creates a simple grid based on your entity (ORM)
-        $source = new Entity('MesdApyDataGridTestBundle:Everything');
-
+        //$source = new Entity('MesdApyDataGridTestBundle:Everything');
+        
+        $doctrine = $this->getDoctrine();
+        $manager = $doctrine->getManager();
+        $repository = $manager->getRepository('MesdApyDataGridTestBundle:Everything');
+        $queryBuilder = $repository->createQueryBuilder('e');
+        $query = $queryBuilder->getQuery();
+        $entity = $query->getResult(Query::HYDRATE_ARRAY);
+        for ($x=0; $x < count($entity); $x++) {
+            if (!is_null($entity[$x]['sampleDatetime'])) {
+                $entity[$x]['sampleDatetime'] = $entity[$x]['sampleDatetime']->format('Y-m-d H:i:s');
+            }
+        }
+        $source = new Vector($entity);
+        
         // Get a Grid instance
         $grid = $this->get('grid');
 

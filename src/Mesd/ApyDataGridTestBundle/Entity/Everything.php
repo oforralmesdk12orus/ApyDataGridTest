@@ -15,26 +15,6 @@ class Everything
     private $id;
 
     /**
-     * @var array
-     */
-    private $sampleArray;
-
-    /**
-     * @var array
-     */
-    private $sampleSimpleArray;
-
-    /**
-     * @var array
-     */
-    private $sampleJsonArray;
-
-    /**
-     * @var \stdClass
-     */
-    private $sampleObject;
-
-    /**
      * @var boolean
      */
     private $sampleBoolean;
@@ -57,7 +37,7 @@ class Everything
     /**
      * @var string
      */
-    private $sampleStrin;
+    private $sampleString;
 
     /**
      * @var string
@@ -68,11 +48,6 @@ class Everything
      * @var \DateTime
      */
     private $sampleDatetime;
-
-    /**
-     * @var \DateTime
-     */
-    private $sampleDatetimeTz;
 
     /**
      * @var \DateTime
@@ -94,16 +69,6 @@ class Everything
      */
     private $sampleFloat;
 
-    /**
-     * @var string
-     */
-    private $sampleBlob;
-
-    /**
-     * @var guid
-     */
-    private $sampleGuid;
-
 
     /**
      * Get id
@@ -113,98 +78,6 @@ class Everything
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set sampleArray
-     *
-     * @param array $sampleArray
-     * @return Everything
-     */
-    public function setSampleArray($sampleArray)
-    {
-        $this->sampleArray = $sampleArray;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleArray
-     *
-     * @return array 
-     */
-    public function getSampleArray()
-    {
-        return $this->sampleArray;
-    }
-
-    /**
-     * Set sampleSimpleArray
-     *
-     * @param array $sampleSimpleArray
-     * @return Everything
-     */
-    public function setSampleSimpleArray($sampleSimpleArray)
-    {
-        $this->sampleSimpleArray = $sampleSimpleArray;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleSimpleArray
-     *
-     * @return array 
-     */
-    public function getSampleSimpleArray()
-    {
-        return $this->sampleSimpleArray;
-    }
-
-    /**
-     * Set sampleJsonArray
-     *
-     * @param array $sampleJsonArray
-     * @return Everything
-     */
-    public function setSampleJsonArray($sampleJsonArray)
-    {
-        $this->sampleJsonArray = $sampleJsonArray;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleJsonArray
-     *
-     * @return array 
-     */
-    public function getSampleJsonArray()
-    {
-        return $this->sampleJsonArray;
-    }
-
-    /**
-     * Set sampleObject
-     *
-     * @param \stdClass $sampleObject
-     * @return Everything
-     */
-    public function setSampleObject($sampleObject)
-    {
-        $this->sampleObject = $sampleObject;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleObject
-     *
-     * @return \stdClass 
-     */
-    public function getSampleObject()
-    {
-        return $this->sampleObject;
     }
 
     /**
@@ -300,26 +173,26 @@ class Everything
     }
 
     /**
-     * Set sampleStrin
+     * Set sampleString
      *
-     * @param string $sampleStrin
+     * @param string $sampleString
      * @return Everything
      */
-    public function setSampleStrin($sampleStrin)
+    public function setSampleString($sampleString)
     {
-        $this->sampleStrin = $sampleStrin;
+        $this->sampleString = $sampleString;
 
         return $this;
     }
 
     /**
-     * Get sampleStrin
+     * Get sampleString
      *
      * @return string 
      */
-    public function getSampleStrin()
+    public function getSampleString()
     {
-        return $this->sampleStrin;
+        return $this->sampleString;
     }
 
     /**
@@ -366,29 +239,6 @@ class Everything
     public function getSampleDatetime()
     {
         return $this->sampleDatetime;
-    }
-
-    /**
-     * Set sampleDatetimeTz
-     *
-     * @param \DateTime $sampleDatetimeTz
-     * @return Everything
-     */
-    public function setSampleDatetimeTz($sampleDatetimeTz)
-    {
-        $this->sampleDatetimeTz = $sampleDatetimeTz;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleDatetimeTz
-     *
-     * @return \DateTime 
-     */
-    public function getSampleDatetimeTz()
-    {
-        return $this->sampleDatetimeTz;
     }
 
     /**
@@ -481,79 +331,5 @@ class Everything
     public function getSampleFloat()
     {
         return $this->sampleFloat;
-    }
-
-    /**
-     * Set sampleBlob
-     *
-     * @param string $sampleBlob
-     * @return Everything
-     */
-    public function setSampleBlob($sampleBlob)
-    {
-        $this->sampleBlob = $sampleBlob;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleBlob
-     *
-     * @return string 
-     */
-    public function getSampleBlob()
-    {
-        return $this->sampleBlob;
-    }
-
-    /**
-     * Set sampleGuid
-     *
-     * @param guid $sampleGuid
-     * @return Everything
-     */
-    public function setSampleGuid($sampleGuid)
-    {
-        $this->sampleGuid = $sampleGuid;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleGuid
-     *
-     * @return guid 
-     */
-    public function getSampleGuid()
-    {
-        return $this->sampleGuid;
-    }
-    /**
-     * @var string
-     */
-    private $sampleString;
-
-
-    /**
-     * Set sampleString
-     *
-     * @param string $sampleString
-     * @return Everything
-     */
-    public function setSampleString($sampleString)
-    {
-        $this->sampleString = $sampleString;
-
-        return $this;
-    }
-
-    /**
-     * Get sampleString
-     *
-     * @return string 
-     */
-    public function getSampleString()
-    {
-        return $this->sampleString;
     }
 }

@@ -9,18 +9,18 @@ Mesd\ApyDataGridTestBundle\Entity\Everything:
             generator:
                 strategy: AUTO
     fields:
-        sampleArray:
-            type: array
-            nullable: true
-        sampleSimpleArray:
-            type: simple_array
-            nullable: true
-        sampleJsonArray:
-            type: json_array
-            nullable: true
-        sampleObject:
-            type: object
-            nullable: true
+        # sampleArray:
+        #     type: array
+        #     nullable: true
+        # sampleSimpleArray:
+        #     type: simple_array
+        #     nullable: true
+        # sampleJsonArray:
+        #     type: json_array
+        #     nullable: true
+        # sampleObject:
+        #     type: object
+        #     nullable: true
         sampleBoolean:
             type: boolean
             nullable: true
@@ -43,9 +43,9 @@ Mesd\ApyDataGridTestBundle\Entity\Everything:
         sampleDatetime:
             type: datetime
             nullable: true
-        sampleDatetimeTz:
-            type: datetimetz
-            nullable: true
+        # sampleDatetimeTz:
+        #     type: datetimetz
+        #     nullable: true
         sampleDate:
             type: date
             nullable: true
@@ -58,10 +58,10 @@ Mesd\ApyDataGridTestBundle\Entity\Everything:
         sampleFloat:
             type: float
             nullable: true
-        sampleBlob:
-            type: blob
-            nullable: true
-        sampleGuid:
-            type: guid
-            nullable: true
+        # sampleBlob:
+        #     type: blob
+        #     nullable: true
+        # sampleGuid:
+        #     type: guid
+        #     nullable: true
     lifecycleCallbacks: {  }
