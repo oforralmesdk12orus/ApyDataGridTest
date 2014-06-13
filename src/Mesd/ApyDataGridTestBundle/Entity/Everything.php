@@ -332,4 +332,49 @@ class Everything
     {
         return $this->sampleFloat;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $another;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->another = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add another
+     *
+     * @param \Mesd\ApyDataGridTestBundle\Entity\Another $another
+     * @return Everything
+     */
+    public function addAnother(\Mesd\ApyDataGridTestBundle\Entity\Another $another)
+    {
+        $this->another[] = $another;
+
+        return $this;
+    }
+
+    /**
+     * Remove another
+     *
+     * @param \Mesd\ApyDataGridTestBundle\Entity\Another $another
+     */
+    public function removeAnother(\Mesd\ApyDataGridTestBundle\Entity\Another $another)
+    {
+        $this->another->removeElement($another);
+    }
+
+    /**
+     * Get another
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAnother()
+    {
+        return $this->another;
+    }
 }

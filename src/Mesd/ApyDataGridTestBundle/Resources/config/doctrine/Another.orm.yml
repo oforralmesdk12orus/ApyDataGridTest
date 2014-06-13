@@ -1,7 +1,7 @@
-Mesd\ApyDataGridTestBundle\Entity\Everything:
+Mesd\ApyDataGridTestBundle\Entity\Another:
     type: entity
-    table: everything
-    repositoryClass: Mesd\ApyDataGridTestBundle\Entity\EverythingRepository
+    table: another
+    repositoryClass: Mesd\ApyDataGridTestBundle\Entity\AnotherRepository
     id:
         id:
             type: integer
@@ -9,68 +9,59 @@ Mesd\ApyDataGridTestBundle\Entity\Everything:
             generator:
                 strategy: AUTO
     fields:
-        # sampleArray:
+        # exampleArray:
         #     type: array
         #     nullable: true
-        # sampleSimpleArray:
+        # exampleSimpleArray:
         #     type: simple_array
         #     nullable: true
-        # sampleJsonArray:
+        # exampleJsonArray:
         #     type: json_array
         #     nullable: true
-        # sampleObject:
+        # exampleObject:
         #     type: object
         #     nullable: true
-        sampleBoolean:
+        exampleBoolean:
             type: boolean
             nullable: true
-        sampleInteger:
+        exampleInteger:
             type: integer
             nullable: true
-        sampleSmallInt:
+        exampleSmallInt:
             type: smallint
             nullable: true
-        sampleBigInt:
+        exampleBigInt:
             type: bigint
             nullable: true
-        sampleString:
+        exampleString:
             type: string
             nullable: true
             length: 255
-        sampleText:
+        exampleText:
             type: text
             nullable: true
-        sampleDatetime:
+        exampleDatetime:
             type: datetime
             nullable: true
-        # sampleDatetimeTz:
+        # exampleDatetimeTz:
         #     type: datetimetz
         #     nullable: true
-        sampleDate:
+        exampleDate:
             type: date
             nullable: true
-        sampleTime:
+        exampleTime:
             type: time
             nullable: true
-        sampleDecimal:
+        exampleDecimal:
             type: decimal
             nullable: true
-        sampleFloat:
+        exampleFloat:
             type: float
             nullable: true
-        # sampleBlob:
+        # exampleBlob:
         #     type: blob
         #     nullable: true
-        # sampleGuid:
+        # exampleGuid:
         #     type: guid
         #     nullable: true
     lifecycleCallbacks: {  }
-    manyToMany:
-        another:
-            targetEntity: Another
-            joinTable:
-                name: everything__another
-                joinColumns:
-                    everything_id: ~
-                inverseJoinColumns:
-                    another_id: ~

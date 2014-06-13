@@ -23,6 +23,7 @@ class DefaultController extends Controller
         $manager = $doctrine->getManager();
         $repository = $manager->getRepository('MesdApyDataGridTestBundle:Everything');
         $queryBuilder = $repository->createQueryBuilder('e');
+        $queryBuilder->leftJoin('e.another', 'a');
         $query = $queryBuilder->getQuery();
         $entity = $query->getResult(Query::HYDRATE_ARRAY);
 

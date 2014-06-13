@@ -2,18 +2,28 @@
 
 namespace Mesd\ApyDataGridTestBundle\DataFixtures\ORM;
 
-use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Mesd\ApyDataGridTestBundle\Entity\Everything;
 
-class EverythingFixtures implements FixtureInterface
+class EverythingFixtures extends AbstractFixture implements OrderedFixtureInterface
 {
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrder()
+    {
+        return 2; // the order in which fixtures will be loaded
+    }
+
     /**
      * {@inheritDoc}
      */
     public function load(ObjectManager $manager)
     {
-        for ($i = 0; $i < mt_rand(256, 1024); $i++) {
+        $iMax = mt_rand(256, 1024);
+        for ($i = 0; $i < $iMax; $i++) {
             $everything = new Everything();
             $everything->setSampleBoolean(1 === mt_rand(0, 1));
             $everything->setSampleInteger(mt_rand(256, 1024));
@@ -37,6 +47,15 @@ class EverythingFixtures implements FixtureInterface
             $everything->setSampleTime($randomDatetime);
             $everything->setSampleDecimal(mt_rand(256, 1024));
             $everything->setSampleFloat(mt_rand(256, 1024));
+            $jMax = mt_rand(0, 7);
+            $alreadyAdded = array();
+            for ($j = 0; $j < $jMax; $j++) {
+                $index = strval(mt_rand(0, 7426));
+                if (!array_key_exists($index, $alreadyAdded)) {
+                    $everything->addAnother($this->getReference('another_' . $index));
+                    $alreadyAdded[$index] = $index;
+                }
+            }
 
             $manager->persist($everything);
         }
