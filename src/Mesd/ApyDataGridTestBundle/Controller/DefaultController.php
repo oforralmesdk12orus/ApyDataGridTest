@@ -25,11 +25,7 @@ class DefaultController extends Controller
         $queryBuilder = $repository->createQueryBuilder('e');
         $query = $queryBuilder->getQuery();
         $entity = $query->getResult(Query::HYDRATE_ARRAY);
-        for ($x=0; $x < count($entity); $x++) {
-            if (!is_null($entity[$x]['sampleDatetime'])) {
-                $entity[$x]['sampleDatetime'] = $entity[$x]['sampleDatetime']->format('Y-m-d H:i:s');
-            }
-        }
+
         $source = new Vector($entity);
         
         // Get a Grid instance
